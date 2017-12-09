@@ -10,7 +10,7 @@ nav {font-size: 13px;
 
 body {font-family:Verdana, Arial, sans-serif;
       font-size: 13px;
-      background-color: #5400FF;
+      background-color: #9CFFC4;
       
 }
 
@@ -25,8 +25,8 @@ iframe {float: right;
         padding: 5px;
         }
 #wrapper {
-    background-color: #000000;
-    color: #000000;
+    background-color: #EEEFFF;
+    color: #000066;
     width: 80%;
     margin: auto;
     min-width: 450px;
