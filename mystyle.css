@@ -41,7 +41,9 @@ figure {
 }
 
 figure1 {
-    float: middle;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 figure2 {
