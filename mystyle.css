@@ -9,8 +9,6 @@ body {font-family:Courier New;
       
 }
 
-table { color: #0A4E0F;
-}
 
 .post-title h4 { margin-bottom: -170px;
 
@@ -39,11 +37,6 @@ figure1 {
     display:block;
     margin-left: auto;
     margin-right: auto;
-}
-
-figure2 {
-    float: left;
-    padding-right: 15px;
 }
 
 /* Add a black background color to the top navigation */
