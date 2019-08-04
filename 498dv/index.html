@@ -14,14 +14,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="//d3js.org/topojson.v1.min.js"></script>
-<style>
+    <style>
 	.state{
 		fill: none;
-		stroke: #a9a9a9;
-		stroke-width: 1;
+		stroke: #535454;
+		stroke-width: 2;
 	}
 	.state:hover{
-		fill-opacity:0.5;
+		fill: #6ade5f;
 	}
 	#tooltip {   
 		position: absolute;           
@@ -61,7 +61,7 @@
 	#tooltip tr td:nth-child(2){
 		text-align:center;
 	}
-</style>
+    </style>
     <title>World Happiness Report</title>
   </head>
   <body>
@@ -69,7 +69,7 @@
     <div class="container">
     <div id="tooltip"></div><!-- div to hold tooltip. -->
     <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-    <script src="uStates.js"></script> <!-- creates uStates. -->
+    <script src="uStates.js"></script> <!-- Using the uStates library to draw states -->
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script>
 
@@ -92,7 +92,7 @@
 				mid=Math.round(100*Math.random()), 
 				high=Math.round(100*Math.random());
 			sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]), 
-					avg:Math.round((low+mid+high)/3), color:d3.interpolate("#ffffcc", "#800026")(low/100)}; 
+					avg:Math.round((low+mid+high)/3), color:d3.interpolate("#ffffcc", "#005580")(low/100)}; 
 		});
 	
 	/* draw states on id #statesvg */	
