@@ -76,7 +76,7 @@
     <script>
 
 	function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
-		return "<h4>"+n+"</h4>"+"<h4>"+d.percent+"%</h4>";
+		return "<h4>"+n+"</h4>"+"<h4>"+d.percent+"% obesity rate</h4>";
 	}
 	
 	var percents = [23.8, 34.2, 28.4, 34.1, 31.6, 36.3, 32.1, 32.8, 30, 26.9, 25.8, 
@@ -116,6 +116,12 @@
 	<div class="card">
 	    <h3 class="card-title">West</h3>
 	    <h5 class="card-body">sdjkfjlsjg</h5>
+	    <svg width="960" height="600" id="view1svg"></svg>
+	    <script>
+		var x = d3.scaleBand().domain(["average US", "Washington", "Oregon", "California", "Montana", "Idaho", "Nevada", "Arizona", "Utah", "Wyoming","Colorado", "New Mexico"]).range([0, 500]);
+		var y = d3.scaleLinear().domain([0,45]).range([100, 0])
+	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr("x", function(d, i) {return i * 50;}).attr('y',function(d,i) {return y(d);}).attr('width',33.3333).attr('height',function(d,i) {return d;});
+	    </script>
 	</div>
     </div>
     <div class="container pt-3" id="view2" style="display:none">
