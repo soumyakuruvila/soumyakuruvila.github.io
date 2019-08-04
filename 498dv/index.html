@@ -46,10 +46,10 @@
 		opacity:0;
 	}
     </style>
-    <title>World Happiness Report</title>
+    <title>Obesity in America</title>
   </head>
   <body>
-    <h1 style="text-align:center;">World Happiness Report</h1>
+    <h1 style="text-align:center;">Obesity in America</h1>
     <div class="container">
     <div id="tooltip"></div><!-- div to hold tooltip. -->
     <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
@@ -83,6 +83,7 @@
 	uStates.draw("#statesvg", sampleData, tooltipHtml);
 	
 	d3.select(self.frameElement).style("height", "600px"); 
+	d3.select("svg").append("text").attr("class","label").text("*Scroll over states for more info.");
     </script>
     </div>
   </body>
