@@ -14,6 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="//d3js.org/topojson.v1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
  	h1 {
    		font-family: open sans;
@@ -94,7 +95,7 @@
 	uStates.draw("#statesvg", sampleData, tooltipHtml);
 	
 	d3.select(self.frameElement).style("height", "600px"); 
-	d3.select("svg").append("text").attr("transform", "translate(540, 560)").attr("class","label").text("*Scroll over states for more info.");
+	d3.select("svg").append("text").attr("font-family", "open sans").attr("transform", "translate(540, 560)").attr("class","label").text("*Scroll over states for more info.");
     </script>
     </div>
   </body>
