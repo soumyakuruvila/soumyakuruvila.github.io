@@ -70,32 +70,24 @@
     <script>
 
 	function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
-		return "<h4>"+n+"</h4><table>"+
-			"<tr><td>Low</td><td>"+(d.low)+"</td></tr>"+
-			"<tr><td>Average</td><td>"+(d.avg)+"</td></tr>"+
-			"<tr><td>High</td><td>"+(d.high)+"</td></tr>"+
-			"</table>";
+		return "<h4>"+n+"</h4>"+"<h4>"+d.percent+"%</h4>;
 	}
 	
-	var sampleData ={};	/* Sample random data. */	
+	var data ={};	
 	["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
 	"ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
 	"MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
 	"CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
 	"WI", "MO", "AR", "OK", "KS", "LS", "VA"]
 		.forEach(function(d){ 
-			var low=Math.round(100*Math.random()), 
-				mid=Math.round(100*Math.random()), 
-				high=Math.round(100*Math.random());
-			sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]), 
-					avg:Math.round((low+mid+high)/3), color:d3.interpolate("#ffffcc", "#005580")(low/100)}; 
+			data[d]={percent:50, color:d3.interpolate("#ffffcc", "#005580")(percent/100)}; 
 		});
 	
 	/* this draw functin is from the uStates library */	
-	uStates.draw("#statesvg", sampleData, tooltipHtml);
+	uStates.draw("#statesvg", data, tooltipHtml);
 	
 	d3.select(self.frameElement).style("height", "600px"); 
-	d3.select("svg").append("text").attr("font-family", "open sans").attr("transform", "translate(580, 67)").attr("font-size", "12px").attr("class","label").text("*Scroll over states for more info.");
+	d3.select("svg").append("text").attr("font-family", "open sans").attr("transform", "translate(630, 67)").attr("font-size", "12px").attr("class","label").text("*Scroll over states for more info.");
     </script>
     </div>
   </body>
