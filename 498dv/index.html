@@ -80,6 +80,7 @@
 	"CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
 	"WI", "MO", "AR", "OK", "KS", "LS", "VA"]
 		.forEach(function(d){ 
+			var percent = 50;
 			data[d]={percent:50, color:d3.interpolate("#ffffcc", "#005580")(percent/100)}; 
 		});
 	
