@@ -23,6 +23,10 @@
 		font-family: open sans;
 		color: #575251;
 	}
+	h5 {
+                font-family: open sans;
+                color: #575251;
+        }
 	.state{
 		fill: none;
 		stroke: #535454;
@@ -57,7 +61,9 @@
     <title>Obesity in America</title>
   </head>
   <body>
-    <h1 style="text-align:center;">Obesity in America</h1>
+    <div class-"jumbotron">
+    	<h1 style="text-align:center;">Obesity in America</h1>
+    </div>
     <div class="container">
 	<h3 style="transfrom(50, 50)">Obesity has been a prevalent issue in America for decades and it only seems to get worse as the years progress.
 	Here we will be exploring the impact of location in America to the percentage of obese individuals in that area.</h3>
@@ -100,11 +106,88 @@
     </div>
     <div class="container pt-5">
 	<h3>Explore the different regions</h3>
-	<button type="button" class="btn btn-outline-success">1</button>
-	<button type="button" class="btn btn-outline-danger">2</button>
-	<button type="button" class="btn btn-outline-warning">3</button>
-	<button type="button" class="btn btn-outline-primary">4</button>
-	<button type="button" class="btn btn-outline-info">5</button>
+	<button onclick="open1()" type="button" class="btn btn-outline-success">1</button>
+	<button onclick="open2()"  type="button" class="btn btn-outline-danger">2</button>
+	<button onclick="open3()"  type="button" class="btn btn-outline-warning">3</button>
+	<button onclick="open4()"  type="button" class="btn btn-outline-primary">4</button>
+	<button onclick="open5()"  type="button" class="btn btn-outline-info">5</button>
+    </div>
+    <div class="container" id="view1">
+	<div class="card">
+	    <h3 class="card-title">West</h3>
+	    <h5 class="card-body">sdjkfjlsjg</h5>
+	</div>
+    </div>
+    <div class="container" id="view2">
+        <div class="card">
+            <h3 class="card-title">Mountain</h3>
+            <h5 class="card-body">sdjkfjlsjg</h5>
+        </div>
+    </div>
+    <div class="container" id="view3">
+        <div class="card">
+            <h3 class="card-title">Midwest</h3>
+            <h5 class="card-body">sdjkfjlsjg</h5>
+        </div>
+    </div>
+    <div class="container" id="view4">
+        <div class="card">
+            <h3 class="card-title">South</h3>
+            <h5 class="card-body">sdjkfjlsjg</h5>
+        </div>
+    </div>
+    <div class="container" id="view5">
+        <div class="card">
+            <h3 class="card-title">East</h3>
+            <h5 class="card-body">sdjkfjlsjg</h5>
+        </div>
     </div>
   </body>
+<script>
+	var view1 = document.getElementById("view1");
+	var view2 = document.getElementById("view2");
+	var view3 = document.getElementById("view3");
+	var view4 = document.getElementById("view4");
+	var view5 = document.getElementById("view5");
+
+	function open1() {
+		view1.style.display = "block";
+		view2.style.display = "";
+                view3.style.display = "";	
+                view4.style.display = "";
+                view5.style.display = "";	
+	}
+
+        function open2() {
+                view2.style.display = "block";
+                view1.style.display = "";
+                view3.style.display = "";       
+                view4.style.display = "";
+                view5.style.display = "";       
+        }
+
+        function open3() {
+                view3.style.display = "block";
+                view2.style.display = "";
+                view1.style.display = "";       
+                view4.style.display = "";
+                view5.style.display = "";       
+        }
+
+        function open4() {
+                view4.style.display = "block";
+                view2.style.display = "";
+                view3.style.display = "";       
+                view1.style.display = "";
+                view5.style.display = "";       
+        }
+
+        function open5() {
+                view5.style.display = "block";
+                view2.style.display = "";
+                view3.style.display = "";       
+                view4.style.display = "";
+                view1.style.display = "";       
+        }
+</script>
 </html>
