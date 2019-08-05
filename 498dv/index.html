@@ -126,20 +126,11 @@
 	    <svg width="960" height="500" id="view1svg"></svg>
 	    <script>
 	        var data = [20, 30, 40];
-		xdomain = [0,1];
-		xrange = [0,1];
-		ydomain = [0,1];
-		yrange = [0,1];
-		cdomain = [0,1];
-		crange = [0,1];
-		xs = d3.scaleLinear().domain(xdomain).range(xrange);
-		ys = d3.scaleLinear().domain(ydomain).range(yrange);
-		cs = d3.scaleLinear().domain(cdomain).range(crange);
 	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
-    			.attr('y',function(d,i) {return ys(i);})
-    			.attr('width',function(d,i) {return xs(d);})
-    			.attr('height',10)
-    			.style('fill',function(d,i) {return cs(d);});;
+    			.attr('y',function(d,i) {return 50 * i + 100;})
+    			.attr('width',function(d,i) {return d;})
+    			.attr('height', 50)
+    			.style('fill', "blue");
 	    </script>
 	</div>
 
