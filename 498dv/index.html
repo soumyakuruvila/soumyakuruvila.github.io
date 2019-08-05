@@ -129,7 +129,7 @@
 		var states = ["United States", "Washington", "Oregon", "California", "Montana", "Idaho", "Nevada", "Arizona", "Utah", "Wyoming","Colorado", "New Mexico"];
 	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
 			.attr('y',function(d,i) {return 100 * i + 50;})
-    			.attr('width',function(d,i) {return d * 15;})
+    			.attr('width',function(d,i) {return d * 30;})
     			.attr('height', 50)
     			.style('fill', "green");
 	    </script>
