@@ -147,12 +147,12 @@
             <script>
                 var data = [31.6, 33.1, 31.9, 32.8, 32.3, 28.4, 36.4, 32.5];
 		var states = ["United States", "North Dakota", "South Dakota", "Nebraska", "Kansas", "Minnesota", "Iowa", "Missouri"];
-            	d3.select("#view2svg").attr("width", 960).attr("height", 700);
-                d3.select("#view2svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',110)
+            	d3.select("#view2svg").attr("width", 960).attr("height", 900);
+                d3.select("#view2svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',120)
                         .attr('y',function(d,i) {return 100 * i + 50;})
                         .attr('width',function(d,i) {return d * 26;})
                         .attr('height', 50)
-                        .style('fill', "green");
+                        .style('fill', "red");
 
 
 		d3.select("#view2svg").append("text").attr("font-family", "open sans").attr("class","label").text("United States").attr("y", 75).attr('x',10);
