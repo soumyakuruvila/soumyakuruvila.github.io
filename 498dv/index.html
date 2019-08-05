@@ -71,7 +71,7 @@
     <div class="jumbotron">
     	<h1 style="text-align:center;">Obesity in America</h1>
     </div>
-    <div class="container">
+    <div class="container pb-5">
 	<h5 style="transfrom(50, 50)">Obesity has been a prevalent issue in America for decades and it only seems to get worse as the years progress.
 	Here we will be exploring the impact of location in America to the percentage of obese individuals in that area.</h5>
     </div>
@@ -125,9 +125,10 @@
 	    <h5 class="card-body">sdjkfjlsjg</h5>
 	    <svg width="960" height="500" id="view1svg"></svg>
 	    <script>
-	        var data = [20, 30, 40];
-	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
-    			.attr('y',function(d,i) {return 50 * i + 100;})
+	        var data = [22.6, 27.7, 29.4, 25.1, 25.3, 29.3, 26.7, 29.5, 25.2, 28.8, 22.6];
+		var states = ["United States", "Washington", "Oregon", "California", "Montana", "Idaho", "Nevada", "Arizona", "Utah", "Wyoming","Colorado", "New Mexico"];
+	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("text").attr("font-family", "open sans").attr("class","label").text(function(d, i) {return states[i];}).append("rect").attr('x',20)
+    			.attr('y',function(d,i) {return 100 * i + 50;})
     			.attr('width',function(d,i) {return d;})
     			.attr('height', 50)
     			.style('fill', "green");
@@ -138,24 +139,60 @@
         <div class="card">
             <h3 class="card-title">Mountain</h3>
             <h5 class="card-body">sdjkfjlsjg</h5>
+            <svg width="960" height="500" id="view1svg"></svg>
+            <script>
+                var data = [20, 30, 40];
+                d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
+                        .attr('y',function(d,i) {return 50 * i + 100;})
+                        .attr('width',function(d,i) {return d;})
+                        .attr('height', 50)
+                        .style('fill', "green");
+            </script>
         </div>
     </div>
     <div class="container pt-3" id="view3" style="display:none">
         <div class="card">
             <h3 class="card-title">Midwest</h3>
             <h5 class="card-body">sdjkfjlsjg</h5>
+            <svg width="960" height="500" id="view1svg"></svg>
+            <script>
+                var data = [20, 30, 40];
+                d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
+                        .attr('y',function(d,i) {return 50 * i + 100;})
+                        .attr('width',function(d,i) {return d;})
+                        .attr('height', 50)
+                        .style('fill', "green");
+            </script>
         </div>
     </div>
     <div class="container pt-3" id="view4" style="display:none">
         <div class="card">
             <h3 class="card-title">South</h3>
             <h5 class="card-body">sdjkfjlsjg</h5>
+            <svg width="960" height="500" id="view1svg"></svg>
+            <script>
+                var data = [20, 30, 40];
+                d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
+                        .attr('y',function(d,i) {return 50 * i + 100;})
+                        .attr('width',function(d,i) {return d;})
+                        .attr('height', 50)
+                        .style('fill', "green");
+            </script>
         </div>
     </div>
     <div class="container pt-3" id="view5" style="display:none">
         <div class="card">
             <h3 class="card-title">East</h3>
             <h5 class="card-body">sdjkfjlsjg</h5>
+            <svg width="960" height="500" id="view1svg"></svg>
+            <script>
+                var data = [20, 30, 40];
+                d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
+                        .attr('y',function(d,i) {return 50 * i + 100;})
+                        .attr('width',function(d,i) {return d;})
+                        .attr('height', 50)
+                        .style('fill', "green");
+            </script>
         </div>
     </div>
   </body>
