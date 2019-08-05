@@ -134,7 +134,7 @@
     			.attr('height', 50)
     			.style('fill', "green");
 
-		d3.select("#view1svg").selectAll("g").data(data).enter().append("text").attr("font-family", "open sans").attr("class","label").text(function(d, i) {return states[i];});
+		d3.select("#view1svg").selectAll("g").data(data).enter().append("text").attr("font-family", "open sans").attr("class","label").text(function(d, i) {return states[i];}).attr("y", 100 * i + 25);
 	    </script>
 	</div>
     </div>
