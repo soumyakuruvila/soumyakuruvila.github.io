@@ -76,13 +76,13 @@
 	Here we will be exploring the impact of location in America to the percentage of obese individuals in that area.</h5>
     </div>
     <div class="container">
-    <div id="tooltip"></div><!-- div to hold tooltip. -->
-    <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+    <div id="tooltip"></div>
+    <svg width="960" height="600" id="statesvg"></svg>
     <script src="uStates.js"></script> <!-- Using the uStates library to draw states -->
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script>
 
-	function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
+	function tooltipHtml(n, d){
 		return "<h4>"+n+"</h4>"+"<h4>"+d.percent+"% obesity rate</h4>";
 	}
 	
@@ -128,7 +128,7 @@
 	        var data = [31.6, 27.7, 29.4, 25.1, 25.3, 29.3, 26.7, 29.5, 25.2, 28.8, 22.6, 28.4];
 		var states = ["USA", "Washington", "Oregon", "California", "Montana", "Idaho", "Nevada", "Arizona", "Utah", "Wyoming","Colorado", "New Mexico"];
 	    	d3.select("#view1svg").attr("width", 960).attr("height", 1300);
-		d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',120)
+		d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',130)
 			.attr('y',function(d,i) {return 100 * i + 50;})
     			.attr('width',function(d,i) {return d * 26;})
     			.attr('height', 50)
@@ -148,7 +148,7 @@
                 var data = [31.6, 33.1, 31.9, 32.8, 32.3, 28.4, 36.4, 32.5];
 		var states = ["United States", "North Dakota", "South Dakota", "Nebraska", "Kansas", "Minnesota", "Iowa", "Missouri"];
             	d3.select("#view2svg").attr("width", 960).attr("height", 850);
-                d3.select("#view2svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',120)
+                d3.select("#view2svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',130)
                         .attr('y',function(d,i) {return 100 * i + 50;})
                         .attr('width',function(d,i) {return d * 26;})
                         .attr('height', 50)
@@ -169,7 +169,7 @@
                 var data = [31.6, 32, 31.1, 32.3, 33.6, 33.8];
 		var states = ["United States", "Wisconsin", "Illinois", "Michigan", "Indiana", "Ohio"];
             	d3.select("#view3svg").attr("width", 960).attr("height", 650);
-                d3.select("#view3svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',120)
+                d3.select("#view3svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',130)
                         .attr('y',function(d,i) {return 100 * i + 50;})
                         .attr('width',function(d,i) {return d * 26;})
                         .attr('height', 50)
@@ -190,7 +190,7 @@
 		var states = ["United States", "Texas", "Oklahoma", "Louisiana", "Arkansas", "Mississippi", "Kentucky", "Alabama", "Tennessee", "Florida", 
 		"Georgia", "North Carolina", "South Carolina", "Virginia", "West Virginia"];
             	d3.select("#view4svg").attr("width", 960).attr("height", 1600);
-                d3.select("#view4svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',120)
+                d3.select("#view4svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',130)
                         .attr('y',function(d,i) {return 100 * i + 50;})
                         .attr('width',function(d,i) {return d * 26;})
                         .attr('height', 50)
@@ -208,9 +208,9 @@
             <svg width="960" height="500" id="view5svg"></svg>
             <script>
                 var data = [31.6, 31.6, 27.2, 25.7, 26.9, 30, 25.8, 29.1, 28.1, 27.6, 26.9, 31.3, 23];
-		var states = ["United States", "Pennsylvania", "New Jersey", "New York", "Connecticut", "Rhode Island", "Massachusetts", "Maine", "New Hampshire", "Vermont", "Delaware", "Maryland", "District of Columbia"];
+		var states = ["United States", "Pennsylvania", "New Jersey", "New York", "Connecticut", "Rhode Island", "Massachusetts", "Maine", "New Hampshire", "Vermont", "Delaware", "Maryland", "DC"];
                 d3.select("#view5svg").attr("width", 960).attr("height", 1400);
-                d3.select("#view5svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',120)
+                d3.select("#view5svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',130)
                         .attr('y',function(d,i) {return 100 * i + 50;})
                         .attr('width',function(d,i) {return d * 26;})
                         .attr('height', 50)
