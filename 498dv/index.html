@@ -127,8 +127,8 @@
 	    <script>
 	        var data = [22.6, 27.7, 29.4, 25.1, 25.3, 29.3, 26.7, 29.5, 25.2, 28.8, 22.6];
 		var states = ["United States", "Washington", "Oregon", "California", "Montana", "Idaho", "Nevada", "Arizona", "Utah", "Wyoming","Colorado", "New Mexico"];
-	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("text").attr("font-family", "open sans").attr("class","label").text(function(d, i) {return states[i];}).append("rect").attr('x',20)
-    			.attr('y',function(d,i) {return 100 * i + 50;})
+	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
+			.attr('y',function(d,i) {return 100 * i + 50;})
     			.attr('width',function(d,i) {return d;})
     			.attr('height', 50)
     			.style('fill', "green");
