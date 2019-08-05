@@ -12,8 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="//d3js.org/d3.v3.min.js"></script>
-    <script src = "https://d3js.org/d3.v4.min.js"> </script> 
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
     <script src="//d3js.org/topojson.v1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
@@ -117,10 +116,23 @@
 	<div class="card">
 	    <h3 class="card-title">West</h3>
 	    <h5 class="card-body">sdjkfjlsjg</h5>
-	    <svg width="960" height="600" id="view1svg"></svg>
+	    <svg width="960" height="500" id="view1svg"></svg>
 	    <script>
-		var data = [20, 30, 40];
-	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr("x", function(d, i) {return i * 50;}).attr('y',function(d,i) {return d;}).attr('width', 33.3333).attr('height',function(d,i) {return d;});
+		var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    		width = 960 - margin.left - margin.right,
+    		height = 500 - margin.top - margin.bottom;
+		
+		var x = d3.scaleBand()
+          		.range([0, width])
+          		.padding(0.1);
+		var y = d3.scaleLinear()
+          		.range([height, 0]);
+
+		var svg = d3.select("#view1svg")
+    			.attr("width", width + margin.left + margin.right)
+    			.attr("height", height + margin.top + margin.bottom)
+  			.append("g")
+    			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	    </script>
 	</div>
     </div>
