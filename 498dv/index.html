@@ -129,7 +129,7 @@
     		width = 960 - margin.left - margin.right,
     		height = 500 - margin.top - margin.bottom;
 		
-		var x = d3.scaleBand()
+		var x = d3.scaleLinear()
           		.range([0, width])
           		.paddingInner(0.1);
 		var y = d3.scaleLinear()
