@@ -128,7 +128,7 @@
 	        var data = [31.6, 27.7, 29.4, 25.1, 25.3, 29.3, 26.7, 29.5, 25.2, 28.8, 22.6, 28.4];
 		var states = ["USA", "Washington", "Oregon", "California", "Montana", "Idaho", "Nevada", "Arizona", "Utah", "Wyoming","Colorado", "New Mexico"];
 	    	d3.select("#view1svg").attr("width", 960).attr("height", 1300);
-		d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',110)
+		d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',120)
 			.attr('y',function(d,i) {return 100 * i + 50;})
     			.attr('width',function(d,i) {return d * 26;})
     			.attr('height', 50)
@@ -186,13 +186,19 @@
             <h5 class="card-body">sdjkfjlsjg</h5>
             <svg width="960" height="500" id="view4svg"></svg>
             <script>
-                var data = [20, 30, 40];
-                d3.select("#view4svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
-                        .attr('y',function(d,i) {return 50 * i + 100;})
-                        .attr('width',function(d,i) {return d;})
+                var data = [31.6, 33, 36.5, 36.2, 35, 37.3, 34.3, 36.3, 32.8, 28.4, 31.6, 32.1, 34.1, 30, 38.1];
+		var states = ["United States", "Texas", "Oklahoma", "Louisiana", "Arkansas", "Mississippi", "Kentucky", "Alabama", "Tennessee", "Florida", 
+		"Georgia", "North Carolina", "South Carolina", "Virginia", "West Virginia"];
+            	d3.select("#view4svg").attr("width", 960).attr("height", 1300);
+                d3.select("#view4svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',120)
+                        .attr('y',function(d,i) {return 100 * i + 50;})
+                        .attr('width',function(d,i) {return d * 26;})
                         .attr('height', 50)
-                        .style('fill', "green");
-            </script>
+                        .style('fill', "#007bff");
+
+                d3.select("#view4svg").append("text").attr("font-family", "open sans").attr("class","label").text("United States").attr("y", 75).attr('x',10);
+                d3.select("#view4svg").selectAll("g").data(data).enter().append("text").attr("font-family", "open sans").attr("class","label").text(function(d, i) {return states[i];}).attr("y", function(d, i) {return 100 * i + 75;}).attr('x',10);
+	    </script>
         </div>
     </div>
     <div class="container pt-3" id="view5" style="display:none">
