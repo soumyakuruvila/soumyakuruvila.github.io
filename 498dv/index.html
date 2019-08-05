@@ -68,7 +68,7 @@
     <title>Obesity in America</title>
   </head>
   <body>
-    <div class-"jumbotron">
+    <div class="jumbotron">
     	<h1 style="text-align:center;">Obesity in America</h1>
     </div>
     <div class="container">
@@ -125,21 +125,24 @@
 	    <h5 class="card-body">sdjkfjlsjg</h5>
 	    <svg width="960" height="500" id="view1svg"></svg>
 	    <script>
-		var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    		width = 960 - margin.left - margin.right,
-    		height = 500 - margin.top - margin.bottom;
-		
-		var x = d3.scaleLinear()
-          		.range([0, width])
-          		.paddingInner(0.1);
-		var y = d3.scaleLinear()
-          		.range([height, 0]);
+	        var data = [20, 30, 40];
+		xdomain = [0,1];
+		xrange = [0,1];
+		ydomain = [0,1];
+		yrange = [0,1];
+		cdomain = [0,1];
+		crange = [0,1];
+		xs = d3.scaleLinear().domain(xdomain).range(xrange);
+		ys = d3.scaleLinear().domain(ydomain).range(yrange);
+		cs = d3.scaleLinear().domain(cdomain).range(crange);
+	    	d3.select("#view1svg").append("g").selectAll("rect").data(data).enter().append("rect").attr('x',20)
+    			.attr('y',function(d,i) {return ys(i);})
+    			.attr('width',function(d,i) {return xs(d);})
+    			.attr('height',10)
+    			.style('fill',function(d,i) {return cs(d);});;
+	    </script>
+	</div>
 
-		var svg = d3.select("#view1svg")
-    			.attr("width", width + margin.left + margin.right)
-    			.attr("height", height + margin.top + margin.bottom)
-  			.append("g")
-    			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	    </script>
 	</div>
     </div>
